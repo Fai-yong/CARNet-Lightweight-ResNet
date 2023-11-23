@@ -28,7 +28,7 @@ In the original ResNet architecture, the BasicBlock module is used as the fundam
 
 To overcome these limitations, we propose to substitute the BasicBlock with a customized module named GroupConvBlock in our improved ResNet. As shown in Fig2, the GroupConvBlock contains the following components:
 
-![Fig2]([URL_to_Fig2](https://github.com/Fai-yong/CARNet/blob/main/Components.png))
+![Fig2](https://github.com/Fai-yong/CARNet/blob/main/Components.svg)
 
 - **Grouped Convolution Layer (conv1):** Instead of regular convolution, we adopt grouped convolution in conv1, which divides the input channels into groups and performs convolution only within each group. This design significantly reduces parameter size as the connection between channels is sparse. For example, with 256 input channels divided into 64 groups, the parameter size is decreased to 1/64 of the original.
 - **Batch Normalization (bn1):** This is applied after conv1 to normalize activations and stabilize training.
